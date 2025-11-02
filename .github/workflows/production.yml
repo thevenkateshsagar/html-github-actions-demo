@@ -1,0 +1,16 @@
+name: html demo ci cd pipeline
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@
+
+      - name: Show Environment
+        run: echo "Deploying to Staging Environment"
